@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Koya Matsuba</title>
+	<link href="scss/style.css" rel="stylesheet" type="text/css">
+</head>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+$(".mainsite").css("display", "none");
+setTimeout(function() {
+    $('.start').fadeOut();
+	}, 1500);
+});
+$(function(){
+    $(".mainsite").css({opacity:'0'});
+    setTimeout(function(){
+    $(".mainsite").css("display", "block");
+    $(".mainsite").stop().animate({opacity:'1'},1000);
+	},2000);
+});
+	</script>
+
+<body>
+	<div class="start">
+		<img src="./image/rogo03.gif" alt="">
+</div>
+	<main class="mainsite">
+	<header id="globalheader">
+		<h1 class="mk"></h1>
+		<p>KOYA MATSUBA.ORG >></p>
+		<ul>
+			<li>mail</li>
+			<li><a href="mailto:matsubakouya0521@gmail.com">matsubakouya0521@gmail.com</a></li>
+		</ul>
+	</header>
+		<div class="about">
+			<h3>ABOUT</h3>
+			<ul>
+				<li>KOYA MATSUBA / 松葉 皓也 </li>
+				<li>1997 - Kanagawa.Japan / Desinger</li>
+				<li>日本工学院専門学校 デザインカレッジ所属</li>
+				<li>Webを中心にDesignや映像を学んでいます。</li>
+			</ul>
+		</div>
+		<div id="workslist">
+			<h1>WORKS</h1>
+			<ul>
+				<li><a href="">all</a></li>
+				<li>　/　</li>
+				<li><a href="">web</a></li>
+				<li>　/　</li>
+				<li><a href="">movie</a></li>
+				<li>　/　</li>
+				<li><a href="">graphic</a></li>
+			</ul>
+			<div class="border_bt"></div>
+		</div>
+		<div class="grid-container">
+			<div id="a"><a href="./index2.html"><img src="./image/work_01.png" alt=""><span>comme des garcons</span></a></div>
+			<div id="b"><a href="./index3.html"><img src="./image/work_02.png" alt=""><span>john lawrence sullivan</span></a></div>
+			<div id="c"><a href="./index4.html"><video src="bova470.mp4" loop autoplay muted></video><span>森永エンゼルパイ</span></a></div>
+			<div id="d"><a href="./index5.html"><video src="haikyu470.mp4" loop autoplay muted></video><span>ハイキュー!! 35巻pv</span></a></div>
+			<div id="e"><a href="./index6.html"><img src="./image/work_03.png" alt=""><span>ハイキュー!!</span></a></div>
+			<div id="f"><a href="./index7.html"><img src="./image/work_04.png" alt=""><span>モネ それからの100年</span></a></div>
+			<div id="g"><a href="./index8.html"><img src="./image/work_05.png" alt=""><span>web icon</span></a></div>
+			<div id="h"><video src="aosora470.mp4" loop autoplay muted></video><span>あおぞらとくもりぞら pv</span></div>
+			<div id="i"><a href="./index9.html"><img src="./image/work_06.png" alt=""><span>Mos burger</span></a></div>
+			<div id="j"><a href="./index12.html"><img src="./image/gr_work_01.png" alt=""><span>Post card</span></a></div>
+			<div id="k"><video src="earth470.mp4" loop autoplay muted></video><span>EARTH FRIENDS 東京Z</span></div>
+			<div id="l"><img src="./image/空き箱.png" alt=""></div>
+		</div>
+		<footer id="footer">
+			<p>© KOYA MATSUBA. 2019 All Rights Reserved</p>
+		</footer>
+	 <!--<div id="worklist">
+		<h1>WORK</h1>
+		<div class="work">
+			<div class="work_thumb">
+				<img src="./image/garcons_thumb.png" alt="garcons">
+			</div>
+		</div>
+		<div class="txt">
+			<h3>COMME des GARCONS</h3>
+		</div>
+		<div class="work">
+			<div class="work_thumb">
+				<img src="./image/sullivan_thumb.png" alt="sullivan">
+			</div>
+		</div>
+		<div class="txt">
+			<h3>JOHN LAWRENCESULLIVAN</h3>
+		</div>
+		<div class="work">
+			<div class="work_thumb">
+				<img src="./image/haikyu_thumb.png" alt="haikyu-">
+			</div>
+		</div>
+		<div class="txt">
+			<h3>ハイキュー!!</h3>
+		</div>
+		<div class="work">
+			<div class="work_thumb">
+				<img src="./image/mos_thumb.png" alt="haikyu-">
+			</div>
+		</div>
+		<div class="txt">
+			<h3 class="txt_block">MOS BURGUR × AR</h3>
+		</div>
+		<div class="work">
+			<div class="work_thumb">
+				<img src="./image/icon_thumb.png" alt="haikyu-">
+			</div>
+		</div>
+		<div class="txt">
+			<h3>Free icon by web creators</h3>
+		</div>
+		<div class="work">
+			<div class="work_thumb">
+				<img src="./image/icon_thumb.png" alt="haikyu-">
+			</div>
+		</div>
+		<div class="txt">
+			<h3>Free icon by web creators</h3>
+		</div>
+	</div>-->
+	</main>
+</body>
+
+</html>
