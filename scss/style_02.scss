@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap');
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+body {
+	width: 100%;
+	min-height: 100%;
+	font-size: 100%;
+	overflow-y: scroll;
+	font-family: Noto Sans JP,sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	p,ul{
+		margin:0;
+		padding:0;
+		color: #000;
+	}
+	li {
+		list-style: none;
+		font-size: 12px;
+	}
+}
+
+#globalheader {
+	width: 960px;
+	margin: 0 auto;
+	height: 160px;
+	box-sizing: border-box;
+	padding-top: 60px;
+	position: relative;
+	z-index: 2;
+
+	.mk {
+		width: 140px;
+		height: 80px;
+		margin: 0 0 10px;
+		background: url("../image/rogo04.gif");
+		margin-left:-10px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		position: fixed;
+
+		a{
+			width: 140px;
+			height: 80px;
+			position: absolute;
+		}
+	}
+
+	ul {
+		right: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		position: absolute;
+
+			a {
+				text-decoration: none;
+				color: black;
+			}
+
+		li:nth-child(1) {
+			padding-right: 10px;
+		}
+
+		li:nth-child(2) {
+			border-left: solid 1px #000;
+			padding-left: 10px;
+		}
+	}
+}
+.single{
+	width: 960px;
+	margin:0 auto;
+	overflow: hidden;
+	opacity: 0;
+	animation: fadeIn 0.6s 0s cubic-bezier(.77,0,.175,1);
+	animation-fill-mode: forwards;
+
+	.overview{
+		width: 200px;
+		position: fixed;
+		line-height: 24px;
+		letter-spacing: 0.08em;
+
+		h1{
+			font-size: 14px;
+			margin-bottom: 50px;
+		}
+		.caption{
+			font-size: 10px;
+			margin-bottom: 50px;
+		}
+	}
+		#singlemeta{
+			width: 720px;
+			float: right;
+			overflow: hidden;
+			.mvthumb{
+				width: 682px;
+				padding-left:23px;
+			}
+			p{
+			margin-bottom: 50px;
+			font-size:10px;
+				line-height: 20px;
+			video{
+				width: 682px;
+				padding-left:23px;
+			}
+				span{
+					margin-left:25px;
+				}
+			img{
+				width: 101%;
+			}
+		}
+			.epilogue{
+				width:680px;
+				margin-top:-20px;
+				padding-left:24px;
+			}
+		}
+	}
+	#footer {
+		width: 960px;
+		margin: 0 auto;
+		height: 45px;
+		margin-top: 50px;
+		padding-top: 10px;
+		box-sizing: border-box;
+		position: relative;
+		z-index: 2;
+		border-top: solid 1px #000;
+
+		p {
+			font-size: 12px;
+		}
+	}

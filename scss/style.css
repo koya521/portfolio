@@ -1,0 +1,454 @@
+@charset "UTF-8";
+/* CSS Document */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap");
+html {
+  height: 100%; }
+
+body {
+  width: 100%;
+  min-height: 100%;
+  font-size: 100%;
+  height: 100%;
+  font-family: Noto Sans JP,sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #000; }
+  body p, body ul {
+    margin: 0;
+    padding: 0;
+    color: #000; }
+  body li {
+    list-style: none;
+    font-size: 12px;
+    letter-spacing: .03em; }
+  body a {
+    text-decoration: none;
+    color: black; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/*はじめにブロックを伸ばすアニメーション*/
+@keyframes secondaryImageOverlayIn {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+/*のび太ブロックを横に追いやるアニメーション*/
+@keyframes secondaryImageOverlayOut {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(102%); } }
+.start {
+  background: #FFF;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center; }
+  .start img {
+    width: 500px; }
+
+#globalheader {
+  width: 960px;
+  margin: 0 auto;
+  height: 160px;
+  box-sizing: border-box;
+  padding-top: 40px;
+  position: relative;
+  z-index: 2; }
+  #globalheader .mk {
+    width: 140px;
+    height: 90px;
+    margin: 0 0 10px;
+    font-size: 16px;
+    letter-spacing: .03em;
+    background: url("../image/rogo04.gif");
+    left: -12px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: absolute; }
+  #globalheader p {
+    position: relative;
+    font-size: 8px;
+    left: 150px; }
+  #globalheader ul {
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute; }
+    #globalheader ul li:nth-child(1) {
+      padding-right: 10px; }
+    #globalheader ul li:nth-child(2) {
+      border-left: solid 1px #000;
+      padding-left: 10px; }
+
+.about {
+  width: 960px;
+  margin: 0 auto;
+  height: 180px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2; }
+  .about h3 {
+    font-size: 16px;
+    margin-bottom: 10px; }
+  .about ul {
+    margin-top: -4px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: absolute;
+    line-height: 24px; }
+
+#workslist {
+  width: 960px;
+  height: 70px;
+  margin: 0 auto 30px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2; }
+  #workslist .border_bt {
+    margin: 0 auto;
+    width: 960px;
+    height: 1px;
+    animation: secondaryImageOverlayIn 0.6s 0s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    background: #000; }
+  #workslist h1 {
+    font-size: 16px;
+    letter-spacing: .03em; }
+  #workslist ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute; }
+    #workslist ul a {
+      text-decoration: none;
+      color: black; }
+    #workslist ul a:hover {
+      text-decoration: underline; }
+
+.grid-container {
+  margin: 0 auto;
+  width: 960px;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+  grid-template-columns: 225px 225px 225px;
+  grid-template-rows: 253px 253px 253px;
+  grid-template-areas: ". . ." ". . ."; }
+  .grid-container #a, .grid-container #b, .grid-container #c, .grid-container #d, .grid-container #e, .grid-container #f, .grid-container #g, .grid-container #h, .grid-container #i, .grid-container #j, .grid-container #k, .grid-container #l {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 0; }
+  .grid-container span {
+    white-space: nowrap;
+    font-size: 10px; }
+  .grid-container #a {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    animation: secondaryImageOverlayIn 0.6s 0s cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: forwards; }
+  .grid-container #a::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0;
+    opacity: 0.4;
+    background-color: #FFF;
+    transition: 0.3s all cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  .grid-container #a:hover::before {
+    width: 100%; }
+  .grid-container #b {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    animation: secondaryImageOverlayIn 0.6s 0.2s cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: forwards; }
+  .grid-container #b::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0;
+    opacity: 0.4;
+    background-color: #FFF;
+    transition: 0.3s all cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  .grid-container #b:hover::before {
+    width: 100%; }
+  .grid-container #c {
+    grid-row: 1 / 2;
+    grid-column: 3 / 5;
+    animation: secondaryImageOverlayIn 0.6s 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: forwards; }
+  .grid-container #c::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0;
+    opacity: 0.4;
+    background-color: #FFF;
+    transition: 0.3s all cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  .grid-container #c:hover::before {
+    width: 100%; }
+  .grid-container #d {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    animation: secondaryImageOverlayIn 0.6s 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: forwards; }
+  .grid-container #d::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0;
+    opacity: 0.4;
+    background-color: #FFF;
+    transition: 0.3s all cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  .grid-container #d:hover::before {
+    width: 100%; }
+  .grid-container #e {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    animation: secondaryImageOverlayIn 0.6s 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: forwards; }
+  .grid-container #e::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0;
+    opacity: 0.4;
+    background-color: #FFF;
+    transition: 0.3s all cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  .grid-container #e:hover::before {
+    width: 100%; }
+  .grid-container #f {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+    animation: secondaryImageOverlayIn 0.6s 1s cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: forwards; }
+  .grid-container #f::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0;
+    opacity: 0.4;
+    background-color: #FFF;
+    transition: 0.3s all cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  .grid-container #f:hover::before {
+    width: 100%; }
+  .grid-container #g {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    animation: secondaryImageOverlayIn 0.6s 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: forwards; }
+  .grid-container #g::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0;
+    opacity: 0.4;
+    background-color: #FFF;
+    transition: 0.3s all cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  .grid-container #g:hover::before {
+    width: 100%; }
+  .grid-container #h {
+    grid-row: 3 / 4;
+    grid-column: 3 / 5;
+    animation: secondaryImageOverlayIn 0.6s 1.6s cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: forwards; }
+  .grid-container #h::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0;
+    opacity: 0.4;
+    background-color: #FFF;
+    transition: 0.3s all cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  .grid-container #h:hover::before {
+    width: 100%; }
+  .grid-container #i {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    animation: secondaryImageOverlayIn 0.6s 1.4s cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: forwards; }
+  .grid-container #i::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0;
+    opacity: 0.4;
+    background-color: #FFF;
+    transition: 0.3s all cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  .grid-container #i:hover::before {
+    width: 100%; }
+  .grid-container #j {
+    grid-row: 4 / 5;
+    grid-column: 3 / 4;
+    animation: secondaryImageOverlayIn 0.6s 2s cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: forwards; }
+  .grid-container #j::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0;
+    opacity: 0.4;
+    background-color: #FFF;
+    transition: 0.3s all cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  .grid-container #j:hover::before {
+    width: 100%; }
+  .grid-container #k {
+    grid-row: 4 / 5;
+    grid-column: 1 / 3;
+    animation: secondaryImageOverlayIn 0.6s 1.8s cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: forwards; }
+  .grid-container #k::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0;
+    opacity: 0.4;
+    background-color: #FFF;
+    transition: 0.3s all cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  .grid-container #k:hover::before {
+    width: 100%; }
+  .grid-container #l {
+    grid-row: 4 / 5;
+    grid-column: 4 / 5;
+    animation: secondaryImageOverlayIn 0.6s 1.8s cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: forwards; }
+  .grid-container #l::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0;
+    opacity: 0.4;
+    background-color: #FFF;
+    transition: 0.3s all cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  .grid-container #l:hover::before {
+    width: 100%; }
+
+#footer {
+  width: 960px;
+  margin: 0 auto;
+  height: 45px;
+  margin-top: 50px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  border-top: solid 1px #000; }
+  #footer p {
+    font-size: 12px; }
+
+#worklist {
+  width: 960px;
+  height: 100%;
+  position: relative;
+  padding: 0 0 80px;
+  margin: 112px auto 0; }
+  #worklist h1 {
+    margin: 0 auto; }
+  #worklist .work_thumb {
+    width: 960px;
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    animation: fadeIn 0.9s 0.5s;
+    animation-fill-mode: both; }
+  #worklist .work {
+    width: 960px;
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+    border: solid 1px #000000; }
+  #worklist .work:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #000;
+    animation: secondaryImageOverlayIn 0.6s 0s cubic-bezier(0.77, 0, 0.175, 1), secondaryImageOverlayOut 0.6s 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: both; }
+  #worklist .txt {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 50px; }
+  #worklist .txt:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #000;
+    animation: secondaryImageOverlayIn 0.6s 0.5s cubic-bezier(0.77, 0, 0.175, 1), secondaryImageOverlayOut 0.6s 1.1s cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: both; }
+  #worklist h3 {
+    margin: 0;
+    animation: fadeIn 1.1s 0.9s;
+    animation-fill-mode: both; }
