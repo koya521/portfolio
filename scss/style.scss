@@ -208,7 +208,9 @@ p{
 		white-space: nowrap;
 		font-size:10px;
 	}
-
+	#a_sp{
+		 display: none ;
+	}
 	#a {
 		grid-row: 1 / 2;
 		grid-column: 1 / 2;
@@ -233,7 +235,9 @@ p{
 	#a:hover::before {
 		width: 100%;
 	}
-
+	#b_sp{
+		 display: none ;
+	}
 	#b {
 		grid-row: 1 / 2;
 		grid-column: 2 / 3;
@@ -308,7 +312,9 @@ p{
 	#d:hover::before {
 		width: 100%;
 	}
-
+	#e_sp{
+		 display: none ;
+	}
 	#e {
 		grid-row: 2 / 3;
 		grid-column: 3 / 4;
@@ -333,7 +339,9 @@ p{
 	#e:hover::before {
 		width: 100%;
 	}
-
+	#f_sp{
+		 display: none ;
+	}
 	#f {
 		grid-row: 2 / 3;
 		grid-column: 4 / 5;
@@ -358,7 +366,9 @@ p{
 	#f:hover::before {
 		width: 100%;
 	}
-
+	#g_sp{
+		 display: none ;
+	}
 	#g {
 		grid-row: 3 / 4;
 		grid-column: 1 / 2;
@@ -408,7 +418,9 @@ p{
 	#h:hover::before {
 		width: 100%;
 	}
-
+	#i_sp{
+		 display: none ;
+	}
 	#i {
 		grid-row: 3 / 4;
 		grid-column: 2 / 3;
@@ -432,6 +444,9 @@ p{
 
 	#i:hover::before {
 		width: 100%;
+	}
+	#j_sp{
+		 display: none ;
 	}
 	#j {
 		grid-row: 4 / 5;

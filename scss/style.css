@@ -216,6 +216,10 @@ body a {
   font-size: 10px;
 }
 
+.grid-container #a_sp {
+  display: none;
+}
+
 .grid-container #a {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
@@ -239,6 +243,10 @@ body a {
 
 .grid-container #a:hover::before {
   width: 100%;
+}
+
+.grid-container #b_sp {
+  display: none;
 }
 
 .grid-container #b {
@@ -316,6 +324,10 @@ body a {
   width: 100%;
 }
 
+.grid-container #e_sp {
+  display: none;
+}
+
 .grid-container #e {
   grid-row: 2 / 3;
   grid-column: 3 / 4;
@@ -341,6 +353,10 @@ body a {
   width: 100%;
 }
 
+.grid-container #f_sp {
+  display: none;
+}
+
 .grid-container #f {
   grid-row: 2 / 3;
   grid-column: 4 / 5;
@@ -364,6 +380,10 @@ body a {
 
 .grid-container #f:hover::before {
   width: 100%;
+}
+
+.grid-container #g_sp {
+  display: none;
 }
 
 .grid-container #g {
@@ -416,6 +436,10 @@ body a {
   width: 100%;
 }
 
+.grid-container #i_sp {
+  display: none;
+}
+
 .grid-container #i {
   grid-row: 3 / 4;
   grid-column: 2 / 3;
@@ -439,6 +463,10 @@ body a {
 
 .grid-container #i:hover::before {
   width: 100%;
+}
+
+.grid-container #j_sp {
+  display: none;
 }
 
 .grid-container #j {

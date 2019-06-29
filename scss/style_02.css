@@ -89,7 +89,7 @@ body {
       font-size: 10px;
       line-height: 20px; }
       .single #singlemeta p video {
-        width: 682px;
+        width: 683px;
         padding-left: 23px; }
       .single #singlemeta p span {
         margin-left: 25px; }
@@ -100,7 +100,7 @@ body {
       margin-top: -20px;
       padding-left: 24px; }
 
-#footer {
+footer {
   width: 960px;
   margin: 0 auto;
   height: 45px;
@@ -110,5 +110,5 @@ body {
   position: relative;
   z-index: 2;
   border-top: solid 1px #000; }
-  #footer p {
+  footer p {
     font-size: 12px; }
