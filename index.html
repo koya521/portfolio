@@ -3,10 +3,13 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 	<title>Koya Matsuba</title>
 	<link href="scss/style.css" rel="stylesheet" type="text/css">
+	<link href="scss/style_sp.css" rel="stylesheet" type="text/css">
 </head>
 <script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
 <script>
 $(function(){
 $(".mainsite").css("display", "none");
@@ -21,6 +24,14 @@ $(function(){
     $(".mainsite").stop().animate({opacity:'1'},1000);
 	},2000);
 });
+$window.onload = function () {
+ if(localStorage.getItem('start') === null || localStorage.getItem('start') != "1"){
+   //ローディング実行
+
+   localStorage.setItem('start',"1");
+ }
+
+};
 	</script>
 
 <body>
@@ -30,7 +41,7 @@ $(function(){
 	<main class="mainsite">
 	<header id="globalheader">
 		<h1 class="mk"></h1>
-		<p>KOYA MATSUBA.ORG >></p>
+		<p>KOYA MATSUBA.ORG &gt;&gt;</p>
 		<ul>
 			<li>mail</li>
 			<li><a href="mailto:matsubakouya0521@gmail.com">matsubakouya0521@gmail.com</a></li>
@@ -66,66 +77,16 @@ $(function(){
 			<div id="e"><a href="./index6.html"><img src="./image/work_03.png" alt=""><span>ハイキュー!!</span></a></div>
 			<div id="f"><a href="./index7.html"><img src="./image/work_04.png" alt=""><span>モネ それからの100年</span></a></div>
 			<div id="g"><a href="./index8.html"><img src="./image/work_05.png" alt=""><span>web icon</span></a></div>
-			<div id="h"><video src="aosora470.mp4" loop autoplay muted></video><span>あおぞらとくもりぞら pv</span></div>
+			<div id="h"><a href="./index10.html"><video src="aosora470.mp4" loop autoplay muted></video><span>あおぞらとくもりぞら pv</span></a></div>
 			<div id="i"><a href="./index9.html"><img src="./image/work_06.png" alt=""><span>Mos burger</span></a></div>
 			<div id="j"><a href="./index12.html"><img src="./image/gr_work_01.png" alt=""><span>Post card</span></a></div>
-			<div id="k"><video src="earth470.mp4" loop autoplay muted></video><span>EARTH FRIENDS 東京Z</span></div>
+			<div id="k"><a href="./index11.html"><video src="earth470.mp4" loop autoplay muted></video><span>EARTH FRIENDS 東京Z</span></a></div>
 			<div id="l"><img src="./image/空き箱.png" alt=""></div>
 		</div>
-		<footer id="footer">
-			<p>© KOYA MATSUBA. 2019 All Rights Reserved</p>
+		<footer >
+			<p>&copy; KOYA MATSUBA. 2019 All Rights Reserved</p>
 		</footer>
-	 <!--<div id="worklist">
-		<h1>WORK</h1>
-		<div class="work">
-			<div class="work_thumb">
-				<img src="./image/garcons_thumb.png" alt="garcons">
-			</div>
-		</div>
-		<div class="txt">
-			<h3>COMME des GARCONS</h3>
-		</div>
-		<div class="work">
-			<div class="work_thumb">
-				<img src="./image/sullivan_thumb.png" alt="sullivan">
-			</div>
-		</div>
-		<div class="txt">
-			<h3>JOHN LAWRENCESULLIVAN</h3>
-		</div>
-		<div class="work">
-			<div class="work_thumb">
-				<img src="./image/haikyu_thumb.png" alt="haikyu-">
-			</div>
-		</div>
-		<div class="txt">
-			<h3>ハイキュー!!</h3>
-		</div>
-		<div class="work">
-			<div class="work_thumb">
-				<img src="./image/mos_thumb.png" alt="haikyu-">
-			</div>
-		</div>
-		<div class="txt">
-			<h3 class="txt_block">MOS BURGUR × AR</h3>
-		</div>
-		<div class="work">
-			<div class="work_thumb">
-				<img src="./image/icon_thumb.png" alt="haikyu-">
-			</div>
-		</div>
-		<div class="txt">
-			<h3>Free icon by web creators</h3>
-		</div>
-		<div class="work">
-			<div class="work_thumb">
-				<img src="./image/icon_thumb.png" alt="haikyu-">
-			</div>
-		</div>
-		<div class="txt">
-			<h3>Free icon by web creators</h3>
-		</div>
-	</div>-->
+
 	</main>
 </body>
 
