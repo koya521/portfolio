@@ -200,7 +200,7 @@ body a {
   grid-column-gap: 20px;
   grid-row-gap: 30px;
   grid-template-columns: 225px 225px 225px;
-  grid-template-rows: 253px 253px 253px;
+  grid-template-rows: 1fr;
   grid-template-areas: ". . ." ". . .";
 }
 
